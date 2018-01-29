@@ -11,9 +11,10 @@ using webapi.Models;
 namespace webapi.Migrations
 {
     [DbContext(typeof(WebapiContext))]
-    partial class WebapiContextModelSnapshot : ModelSnapshot
+    [Migration("20180129162942_identity")]
+    partial class identity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
