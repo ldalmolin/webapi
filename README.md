@@ -14,3 +14,5 @@ curl -X GET \
   -H 'authorization: Bearer Token
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json'
+  
+  dotnet add package Dapper
