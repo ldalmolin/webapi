@@ -14,3 +14,9 @@ curl -X GET \
   -H 'authorization: Bearer Token
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json'
+  
+  dotnet add package Dapper
+  
+  MyDBContext:
+  dotnet ef migrations add Users --context MyDBContext -v
+  dotnet ef database update --context MyDBContext
