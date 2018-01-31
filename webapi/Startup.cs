@@ -15,6 +15,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using webapi.Models;
+using webapi.Repository;
 
 namespace webapi
 {
@@ -33,6 +34,7 @@ namespace webapi
             services.AddMvc();
             var connection = @"Server=localhost;User Id=root;Password=root;Database=webapi";
             services.AddDbContext<WebapiContext>(options => options.UseMySql(connection));
+            services.AddDbContext<MyDBContext>(options => options.UseMySql(connection));
             services.AddTransient<IUsersRepository, UsersRepository>();  
 
             // ===== Add Identity ========

@@ -4,6 +4,8 @@ using System.Linq.Expressions;
 using System.Threading.Tasks;
 using webapi.Models;
 
+namespace webapi.Repository
+{
 public interface IGenericRepository<T> where T : class 
 {
     Task<T> AddAsync(T entity);
@@ -14,4 +16,5 @@ public interface IGenericRepository<T> where T : class
     Task<T> FindAsync(Expression<Func<T, bool>> match);
 
     Task<int> SaveAsync();
+}
 }

@@ -1,5 +1,7 @@
 using webapi.Models;
 
+namespace webapi.Repository
+{
 public class UsersRepository : GenericRepository<Users>, IUsersRepository  
   {  
   
@@ -7,3 +9,4 @@ public class UsersRepository : GenericRepository<Users>, IUsersRepository
     {  
     }  
   }
+}

@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using webapi.Models;
 
+namespace webapi.Repository
+{
 public abstract class GenericRepository<T> : IGenericRepository<T> where T : class
 {
     private readonly WebapiContext _context;
@@ -59,4 +61,5 @@ public abstract class GenericRepository<T> : IGenericRepository<T> where T : cla
     {  
       return await _context.SaveChangesAsync();  
     }  
+}
 }
