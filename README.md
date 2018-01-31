@@ -16,3 +16,5 @@ curl -X GET \
   -H 'content-type: application/json'
   
   dotnet add package Dapper
+  
+  MyDBContext:dotnet ef migrations add Users --context MyDBContext -v
