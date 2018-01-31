@@ -17,4 +17,6 @@ curl -X GET \
   
   dotnet add package Dapper
   
-  MyDBContext:dotnet ef migrations add Users --context MyDBContext -v
+  MyDBContext:
+  dotnet ef migrations add Users --context MyDBContext -v
+  dotnet ef database update --context MyDBContext
