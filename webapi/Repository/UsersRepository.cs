@@ -5,7 +5,7 @@ namespace webapi.Repository
 public class UsersRepository : GenericRepository<Users>, IUsersRepository  
   {  
   
-    public UsersRepository(WebapiContext context) : base(context)  
+    public UsersRepository(MyDBContext context) : base(context)  
     {  
     }  
   }

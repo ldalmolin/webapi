@@ -9,11 +9,11 @@ namespace webapi.Repository
 {
 public abstract class GenericRepository<T> : IGenericRepository<T> where T : class
 {
-    private readonly WebapiContext _context;
+    private readonly MyDBContext _context;
 
-    public GenericRepository(WebapiContext webapiContext)
+    public GenericRepository(MyDBContext context)
     {
-        _context = webapiContext;
+        _context = context;
     }
 
     public async virtual Task<T> AddAsync(T entity)
