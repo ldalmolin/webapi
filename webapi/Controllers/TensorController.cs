@@ -32,7 +32,7 @@ namespace webapi.Controllers
                 // Multiply two constants
                 var multiplyResults = session.GetRunner().Run(graph.Mul(a, b));
                 _logger.LogInformation("a*b={0}", multiplyResults.GetValue());
-                return Ok(addingResults.GetValue());
+                return Ok($"a+b={addingResults.GetValue()} a*b={multiplyResults.GetValue()}");
             }
 
             
